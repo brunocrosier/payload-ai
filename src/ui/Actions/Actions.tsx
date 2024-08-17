@@ -3,7 +3,7 @@
 import type { LexicalEditor } from 'lexical'
 
 import { FieldDescription, Popup, useDocumentDrawer, useField, useFieldProps } from '@payloadcms/ui'
-import { $getRoot } from 'lexical'
+// import { $getRoot } from 'lexical'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 import { PluginIcon } from '../Icons/Icons.js'
