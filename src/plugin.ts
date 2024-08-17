@@ -1,5 +1,6 @@
 import type { Config } from 'payload'
 
+import * as path from 'node:path'
 import { deepMerge } from 'payload/shared'
 
 import type { PluginConfig } from './types.js'
@@ -7,21 +8,31 @@ import type { PluginConfig } from './types.js'
 import { Instructions } from './collections/Instructions.js'
 import { endpoints } from './endpoints/index.js'
 import { init } from './init.js'
-import { InstructionsProvider } from './providers/InstructionsProvider/index.js'
+import { InstructionsProvider } from './providers/InstructionsProvider/InstructionsProvider.js'
 import { translations } from './translations/index.js'
 import { updateFieldsConfig } from './utilities/updateFieldsConfig.js'
 
-const payloadAI =
+const payloadAiPlugin =
   (pluginConfig: PluginConfig) =>
   (incomingConfig: Config): Config => {
     const collections = [...(incomingConfig.collections ?? []), Instructions]
     const { collections: collectionSlugs = [] } = pluginConfig
 
     let collectionsFieldPathMap = {}
-
+    // /Users/ashish/projects/personal/website/node_modules/@ai-stack/payloadcms/dist/providers/InstructionsProvider/index.js
+    // const pat = path.resolve(
+    //   './node_modules',
+    //   './@ai-stack/payloadcms/dist/providers/InstructionsProvider/index.js#InstructionsProvider',
+    // )
+    // console.log('pat --->', InstructionsProvider)
     incomingConfig.admin.components.providers = [
       ...(incomingConfig.admin.components.providers ?? []),
-      InstructionsProvider,
+      {
+        clientProps: {},
+        // exportName: 'InstructionsProvider',
+        path: '@ai-stack/payloadcms#InstructionsProvider',
+        serverProps: {},
+      },
     ]
 
     const updatedConfig: Config = {
@@ -76,4 +87,4 @@ const payloadAI =
     return updatedConfig
   }
 
-export { payloadAI }
+export { payloadAiPlugin }

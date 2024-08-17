@@ -1,6 +1,6 @@
 {
   "name": "@ai-stack/payloadcms",
-  "version": "3.0.0-beta.65",
+  "version": "3.0.0-beta.79",
   "private": false,
   "bugs": "https://github.com/ashbuilds/payload-ai/issues",
   "repository": "https://github.com/ashbuilds/payload-ai",
@@ -37,14 +37,14 @@
     "@anthropic-ai/sdk": "^0.24.3",
     "@langchain/core": "^0.2.15",
     "@langchain/openai": "^0.2.1",
-    "@lexical/html": "^0.16.1",
+    "@lexical/html": "0.17.0",
     "ai": "^3.3.3",
     "dot-object": "^2.1.5",
     "elevenlabs": "^0.8.2",
     "handlebars": "4.7.8",
     "handlebars-async-helpers": "^1.0.6",
     "langchain": "^0.2.9",
-    "lexical": "^0.16.1",
+    "lexical": "0.17.0",
     "openai": "^4.47.1",
     "zod": "^3.23.8",
     "zod-to-json-schema": "^3.23.1"
@@ -70,7 +70,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-regexp": "^2.6.0",
     "globals": "^15.8.0",
-    "payload": "3.0.0-beta.65",
+    "payload": "3.0.0-beta.79",
     "prettier": "^3.3.3",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
@@ -79,11 +79,11 @@
     "rimraf": "6.0.1"
   },
   "peerDependencies": {
-    "@payloadcms/next": "3.0.0-beta.65",
-    "@payloadcms/richtext-lexical": "3.0.0-beta.65",
-    "@payloadcms/translations": "3.0.0-beta.65",
-    "@payloadcms/ui": "3.0.0-beta.65",
-    "payload": "3.0.0-beta.65"
+    "@payloadcms/next": "3.0.0-beta.84",
+    "@payloadcms/richtext-lexical": "3.0.0-beta.84",
+    "@payloadcms/translations": "3.0.0-beta.84",
+    "@payloadcms/ui": "3.0.0-beta.84",
+    "payload": "3.0.0-beta.84"
   },
   "publishConfig": {
     "exports": {

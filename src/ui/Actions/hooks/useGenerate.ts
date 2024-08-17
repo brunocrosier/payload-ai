@@ -19,7 +19,6 @@ type UseGenerate = {
   lexicalEditor: LexicalEditor
 }
 
-//TODO: DONATION IDEA - Add a url to donate in cli when user installs the plugin and uses it for couple of times.
 export const useGenerate = ({ lexicalEditor }: UseGenerate) => {
   const { type, path: pathFromContext, schemaPath } = useFieldProps()
 

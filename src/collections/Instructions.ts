@@ -69,7 +69,7 @@ export const Instructions: CollectionConfig = {
       type: 'select',
       admin: {
         components: {
-          Field: SelectField,
+          // Field: SelectField,
         },
         custom: {
           filterByField: 'field-type',
@@ -83,14 +83,14 @@ export const Instructions: CollectionConfig = {
           value: option.value,
         }
       }),
-      validate: () => true,
+      // validate: () => true,
     },
     {
       name: 'prompt',
       type: 'textarea',
       admin: {
         components: {
-          Field: PromptEditorField,
+          // Field: PromptEditorField,
         },
       },
     },

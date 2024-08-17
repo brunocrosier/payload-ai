@@ -10,7 +10,7 @@ import { getAllVoices } from './voices.js'
 //TODO: Add prompt optimisation for ElevenLabs models
 
 const { voices = [] } = await getAllVoices()
-console.log('voices-->', voices)
+
 const voiceOptions = voices.map((voice) => {
   return {
     label: voice.name,
@@ -54,7 +54,7 @@ export const ElevenLabsConfig: GenerationConfig = {
             type: 'select',
             admin: {
               components: {
-                Field: SelectField,
+                // Field: SelectField,
               },
               custom: {
                 options: voiceOptions,
@@ -69,7 +69,7 @@ export const ElevenLabsConfig: GenerationConfig = {
               }
             }),
             required: true,
-            validate: () => true,
+            // validate: () => true,
           },
           {
             type: 'collapsible',

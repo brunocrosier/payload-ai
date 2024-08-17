@@ -1,6 +1,6 @@
 'use client'
 
-import type { TextareaFieldProps } from '@payloadcms/ui'
+// import type { TextareaFieldProps } from 'payload'
 
 import { TextareaField as InputField, useField, useFieldProps, useForm } from '@payloadcms/ui'
 import React, { useCallback, useEffect, useRef } from 'react'
@@ -9,7 +9,7 @@ import { useInstructions } from '../../providers/InstructionsProvider/hook.js'
 import { Floatype } from '../../ui/Floatype/Floatype.js'
 
 //TODO: Display the handlebarjs tips in description
-export const PromptEditorField: React.FC<TextareaFieldProps> = (props) => {
+export const PromptEditorField = (props) => {
   const { name, path: pathFromProps, ...restProps } = props
   const { path: pathFromContext } = useFieldProps()
 
